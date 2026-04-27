@@ -1,4 +1,4 @@
-class Solution {
+/*class Solution {
     public void sortColors(int[] nums) {
         int count0  = 0;
         int count1 =0;
@@ -15,5 +15,11 @@ class Solution {
         
 
         
+    }
+}*/
+
+class Solution{
+    public void sortColors(int[] nums ){
+        Arrays.sort(nums);
     }
 }
