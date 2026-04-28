@@ -1,14 +1,19 @@
 class Solution {
     public int missingNumber(int[] nums) {
         int n = nums.length;
-        int[] v = new int[n+1];
-        Arrays.fill(v, -1);
-        for(int i = 0; i < nums.length; i++) {
-            v[nums[i]] = nums[i];
+       for(int i =0 ; i <=n ; i++){
+        boolean found = false;
+        for(int j =0 ; j < n; j++){
+            if(nums[j] == i){
+                found = true;
+                break;
+
+            }
         }
-        for(int i = 0; i < v.length; i++) {
-            if(v[i] == -1) return i;
+        if(!found){
+            return i;
         }
-        return 0;
+       }
+       return -1;
     }
 }
